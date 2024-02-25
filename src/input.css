@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.test {
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+  transform: rotate(180deg);
+  transform: matrix();
+}
+.swiper {
+  width: 500px;
+  height: 500px%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+@layer utilities {
+  .holder {
+    @apply bg-blue-400 w-[100px] h-[50px] text-center absolute translate-x-[-50%] translate-y-[-100%] skew-x-12;
+  }
+}
