@@ -14,14 +14,21 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      body {
+        font-family: Poppins;
+      }
+    </style>
   </head>
   <body>
     <nav>
-      <div
-        id="navbar"
-        class="bg-slate-600 container mx-auto px-4 py-6 flex justify-between"
-      >
-        <h1>logo</h1>
+      <div id="navbar" class="container mx-auto px-4 py-6 flex justify-between">
+        <img
+          src="images/sgd logo.jpg"
+          alt=""
+          class="rounded-full size-[50px]"
+        />
         <ul class="space-x-8 hidden md:flex">
           <li><a href="" class="text-xl font-semibold">Home</a></li>
           <li><a href="" class="text-xl font-semibold">Home</a></li>
@@ -34,7 +41,7 @@
       </div>
       <div
         id="sidebar"
-        class="bg-orange-400 fixed w-[60%] h-screen right-[-100%] transition-all duration-300 ease-in-out md:hidden"
+        class="fixed w-[60%] h-screen right-[-100%] transition-all duration-300 ease-in-out md:hidden backdrop-blur-2xl"
       >
         <ul class="flex flex-col">
           <li><a href="" class="text-xl font-semibold">Home</a></li>
@@ -45,10 +52,24 @@
       </div>
     </nav>
     <!-- HERO -->
-    <section class="bg-green-300 h-screen w-full mt-[-81px]">
+    <section
+      style="
+        background-image: url('./images/2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+      class="h-screen w-full mt-[-100px]"
+    >
       <div class="h-screen w-full p-4 grid place-items-center">
         <div class="text-center">
-          <h1 class="text-8xl pb-4">sdg17</h1>
+          <div class="flex justify-center md:text-[200px] text-[100px]">
+            <h1 id="s" class="font-extrabold">S</h1>
+            <h1 id="d" class="font-extrabold">D</h1>
+            <h1 id="g" class="font-extrabold">G</h1>
+            <h1 id="one" class="font-extrabold">1</h1>
+            <h1 id="seven" class="font-extrabold">7</h1>
+          </div>
+
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi,
             deleniti!
@@ -59,8 +80,47 @@
         </div>
       </div>
     </section>
-    <h1 class="h-[100px]">hello world</h1>
-
+    <!-- ABOUT -->
+    <section
+      class=""
+      style="
+        background-image: url('/images/about-bg (1).png');
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="container px-9 py-16 mx-auto">
+        <div
+          class="grid place-items-center content-center gap-16 md:grid-cols-2"
+        >
+          <img src="/images/future.png" alt="" class="md:size-[550px]" />
+          <div class="font-medium">
+            <p
+              style="text-align: justify; text-justify: inter-word"
+              class="text-gray-800 md:text-xl mb-8"
+            >
+              In today's rapidly changing world, we face unprecedented
+              challenges, from climate change and poverty to inequality and
+              environmental degradation. The UN Sustainable Development Goals
+              (SDGs) offer a comprehensive blueprint to address these challenges
+              and create a brighter future for generations to come.
+            </p>
+            <p
+              style="text-align: justify; text-justify: inter-word"
+              class="text-gray-800 md:text-xl"
+            >
+              SDG 17 recognizes that achieving these ambitious objectives
+              requires a global collective effort. It acknowledges that no
+              single country, organization, or individual can achieve
+              sustainable development alone. It calls for collaboration,
+              innovation, and a shared commitment from governments, businesses,
+              civil society, and individuals to work together towards a common
+              purpose.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- JAVASCRIPT -->
     <script src="index.js"></script>
   </body>

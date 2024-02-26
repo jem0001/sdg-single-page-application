@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .test {
   width: 50px;
   height: 50px;
@@ -21,6 +22,38 @@
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+/* SDG17 BACKGROUND */
+#s,
+#d,
+#g,
+#one,
+#seven {
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+  background-size: cover;
+}
+#s {
+  background-image: url("/images/letter/1.png");
+}
+#d {
+  background-image: url("/images/letter/2.png");
+}
+#g {
+  background-image: url("/images/letter/3.png");
+}
+#one {
+  background-image: url("/images/letter/4.png");
+}
+#seven {
+  background-image: url("/images/letter/5.png");
 }
 
 @layer utilities {
