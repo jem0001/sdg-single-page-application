@@ -1,15 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   // TOGGLE MENU
-  const toggleButton = document.querySelector("#menu");
+  const menu = document.querySelector("#menu");
   const sidebar = document.querySelector("#sidebar");
+  const close = document.querySelector("#close");
 
-  toggleButton.addEventListener("click", function () {
+  // open
+  menu.addEventListener("click", function () {
     console.log(sidebar.style.right);
-    if (sidebar.style.right !== "0px") {
-      sidebar.style.right = 0;
-    } else {
-      sidebar.style.right = "-100%";
-    }
+    sidebar.style.right = 0;
+    close.style.display = "block";
+    menu.style.display = "none";
+  });
+  // close
+  close.addEventListener("click", function () {
+    sidebar.style.right = "-100%";
+    close.style.display = "none";
+    menu.style.display = "block";
   });
 
   // ROTATING SLIDER
