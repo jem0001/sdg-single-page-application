@@ -23,11 +23,11 @@
   </head>
   <body>
     <nav>
-      <div id="navbar" class="container mx-auto px-4 py-6 flex justify-between">
+      <div id="navbar" class="container mx-auto px-4 py-4 flex justify-between items-center">
         <img
           src="images/sgd logo.jpg"
           alt=""
-          class="rounded-full size-[50px]"
+          class="rounded-full size-[5rem]"
         />
         <ul class="space-x-8 hidden md:flex">
           <li><a href="" class="text-xl font-semibold">Home</a></li>
@@ -61,7 +61,7 @@
         background-size: cover;
         background-repeat: no-repeat;
       "
-      class="h-screen w-full mt-[-100px]"
+      class="h-screen w-full mt-[-112px]"
     >
       <div class="h-screen w-full p-4 grid place-items-center">
         <div class="text-center">
@@ -121,6 +121,55 @@
         </div>
       </div>
     </section>
+<!-- ROTATING SLIDER -->
+    
+      <section class="grid place-items-center py-16 px-4 bg-red-300 overflow-hidden" style="background-image: url(images/bilog-bg.png); background-size: cover; background-repeat: no-repeat;">
+        <div class="flex">
+          
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">1</div>
+              <div class="swiper-slide">2</div>
+              <div class="swiper-slide">3</div>
+              <div class="swiper-slide">4</div>
+            </div>
+            <div class="swiper-button-next invisible"></div>
+          </div>
+          <img src="images/sirkol.png" alt="" id="sirkol" class="rounded-full size-[550px] mr-[-20%]  ">
+        </div>
+     
+      </section>
+  
+  
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+  
+          loop: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+          },
+        });
+      </script>
+      <script>
+        let degrees = 0;
+        document.addEventListener("DOMContentLoaded", function () {
+          const nextDesc = document.querySelector(".swiper-button-next");
+          const redDiv = document.querySelector(".bg-red-400");
+          redDiv.addEventListener("click", function () {
+            degrees = degrees + 90;
+            redDiv.style.transform = `rotate(${degrees}deg)`;
+            nextDesc.click();
+          });
+        });
+      </script>
+  
+
     <!-- JAVASCRIPT -->
     <script src="index.js"></script>
   </body>
